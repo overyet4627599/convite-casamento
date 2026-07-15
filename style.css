@@ -1,0 +1,43 @@
+body{
+    margin:0;
+    font-family:Arial;
+    background:#fafafa;
+    text-align:center;
+}
+
+.hero{
+    background:linear-gradient(
+    45deg,
+    #800020,
+    #D4AF37
+    );
+
+    color:white;
+    padding:100px;
+}
+
+h1{
+    font-size:50px;
+}
+
+section{
+    padding:40px;
+}
+
+img{
+    width:250px;
+    border-radius:15px;
+    margin:10px;
+}
+
+button{
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+input{
+    padding:15px;
+    width:250px;
+}
