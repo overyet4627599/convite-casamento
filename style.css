@@ -7,19 +7,30 @@ body {
   overflow-x: hidden;
 }
 
+/* Cabeçalho com foto dos noivos e overlay marsala */
 header {
-  background: url('https://images.unsplash.com/photo-1529636521050-2f8c1a2f1f1f') no-repeat center/cover;
-  height: 60vh;
+  position: relative;
+  background: url('fotos/fundo.jpg') no-repeat center/cover;
+  height: 100vh; /* ocupa toda a tela */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
   text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
   animation: fadeIn 2s ease-in-out;
 }
 
+header .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(128, 0, 0, 0.4); /* marsala translúcido */
+}
+
 header h1 {
-  font-size: 4em; 
+  position: relative;
+  font-size: 5em; /* nome maior */
+  color: #FFFDD0; /* cor marfim */
+  z-index: 1;
 }
 
 section {
@@ -90,6 +101,7 @@ section {
   background: #add8e6; 
 }
 
+/* Pix */
 .pix-block {
   margin: 30px auto;
   padding: 20px;
@@ -133,6 +145,7 @@ section {
   border-radius: 10px;
 }
 
+/* Lista de Presentes */
 .gift-list {
   margin: 30px auto;
   padding: 20px;
@@ -175,6 +188,7 @@ section {
   color: white;
 }
 
+/* Carrossel */
 .carousel {
   position: relative;
   max-width: 800px;
@@ -217,14 +231,10 @@ section {
   background: #add8e6; 
 }
 
-.carousel-btn.prev {
-  left: 10px;
-}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
 
-.carousel-btn.next {
-  right: 10px;
-}
-
+/* Formulário */
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -264,6 +274,7 @@ button:hover {
   background: #add8e6; 
 }
 
+/* Rodapé */
 footer {
   margin-top: 40px;
   padding: 20px;
@@ -283,6 +294,7 @@ footer a:hover {
   color: #add8e6; 
 }
 
+/* Animações */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
@@ -293,15 +305,19 @@ footer a:hover {
   to {transform: translateY(0); opacity: 1;}
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
-  header h1 { font-size: 3em; }
+  header h1 { font-size: 3.5em; color: #FFFDD0; }
   .info { font-size: 1em; }
   .btn { flex: 1 1 100%; padding: 12px 20px; font-size: 1em; }
 }
 
 @media (max-width: 480px) {
-  header { height: 40vh; }
-  header h1 { font-size: 2.2em; }
+  header { height: 60vh; }
+  header h1 { 
+    font-size: 2.5em; 
+    color: #FFFDD0; /* mantém marfim em celulares */
+  }
   .info { font-size: 0.9em; }
   .btn { font-size: 0.9em; padding: 10px 15px; }
   .gift-list, .pix-block, .carousel {

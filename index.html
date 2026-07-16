@@ -5,15 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Convite de Casamento - Tiago & Kaiane</title>
 
+  <!-- Fonte personalizada -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
+  <!-- Ícones Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <!-- CSS externo -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+  <!-- Cabeçalho com foto dos noivos -->
   <header>
+    <div class="overlay"></div>
     <h1>Tiago & Kaiane</h1>
   </header>
 
@@ -23,8 +28,10 @@
       <p><strong>Sexta-feira, 11 de Setembro às 18:00</strong></p>
     </div>
 
+    <!-- Contador regressivo -->
     <div class="countdown" id="countdown"></div>
 
+    <!-- Botões principais -->
     <div class="buttons">
       <a href="site.html" class="btn"><i class="fas fa-heart"></i> Site dos Noivos</a>
       <a href="#pix" class="btn"><i class="fas fa-gift"></i> Presente via Pix</a>
@@ -33,6 +40,7 @@
       <a href="https://maps.app.goo.gl/UQxGFGQzmohDNSAo7?g_st=aw" class="btn"><i class="fas fa-home"></i> Residência do Paulo Marinheiro</a>
     </div>
 
+    <!-- Bloco Pix -->
     <div id="pix" class="pix-block">
       <h2>🎁 Presente via Pix</h2>
       <p>Sua contribuição é muito especial para nós!</p>
@@ -52,6 +60,7 @@
       </div>
     </div>
 
+    <!-- Lista de Presentes -->
     <div id="presentes" class="gift-list">
       <h2>🎁 Lista de Presentes</h2>
       <p>Se preferir, escolha um dos itens abaixo ou algo da sua preferência:</p>
@@ -72,7 +81,7 @@
         <li>Panela de pressão</li>
         <li>Potes para mantimentos</li>
         <li>Lençol</li>
-        <li>Bateira</li>
+        <li>Batedeira</li>
         <li>Ferro de passar</li>
         <li>Liquidificador</li>
         <li>Processador</li>
@@ -85,6 +94,7 @@
       </ul>
     </div>
 
+    <!-- Formulário de confirmação -->
     <form action="https://formsubmit.co/overyet4627599@gmail.com" method="POST">
       <h2>Confirme sua presença</h2>
       <input type="text" name="nome" placeholder="Seu nome" required>
@@ -98,15 +108,18 @@
       <textarea name="mensagem" placeholder="Mensagem para os noivos (opcional)"></textarea>
       <button type="submit">Enviar Confirmação</button>
 
+      <!-- Configurações extras -->
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://site-dos-noivos.com/obrigado.html">
+      <input type="hidden" name="_next" value="obrigado.html">
       <input type="text" name="_honey" style="display:none">
     </form>
 
+    <!-- Controle da música -->
     <div style="margin-top:20px;">
       <button onclick="toggleMusic()">🎵 Play/Pause Música</button>
     </div>
 
+    <!-- Música de fundo -->
     <audio id="bg-music" loop>
       <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
       Seu navegador não suporta áudio.
@@ -122,6 +135,7 @@
     </div>
   </footer>
 
+  <!-- JS externo -->
   <script src="script.js"></script>
 </body>
 </html>
