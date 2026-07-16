@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Great Vibes', cursive;
-  background: linear-gradient(to bottom, #fff0f5, #ffe4e1);
-  color: #4a2c2a;
+  background: linear-gradient(to bottom, #add8e6, #ffe4e1); /* azul claro + tom suave */
+  color: #800000; /* marsala */
   text-align: center;
   overflow-x: hidden;
 }
@@ -19,7 +19,7 @@ header {
 }
 
 header h1 {
-  font-size: 3em;
+  font-size: 4em; /* nome dos noivos maior */
 }
 
 section {
@@ -37,13 +37,13 @@ section {
   font-size: 1.5em;
   font-weight: bold;
   margin: 20px 0;
-  color: #d63384;
+  color: #800000; /* marsala */
   font-family: 'Segoe UI', sans-serif;
   animation: pulse 2s infinite;
 }
 
 .countdown span {
-  background: #fff0f5;
+  background: #add8e6; /* azul claro */
   padding: 5px 10px;
   border-radius: 8px;
   margin: 0 5px;
@@ -65,7 +65,7 @@ section {
 }
 
 .btn {
-  background: #ff69b4;
+  background: #800000; /* marsala */
   color: white;
   padding: 15px 25px;
   border-radius: 30px;
@@ -87,7 +87,94 @@ section {
 
 .btn:hover {
   transform: scale(1.05);
-  background: #d63384;
+  background: #add8e6; /* azul claro */
+}
+
+/* Bloco Pix */
+.pix-block {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 400px;
+  background: #add8e6; /* azul claro */
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #800000; /* marsala */
+}
+
+.pix-block h2 {
+  margin-bottom: 10px;
+  color: #800000;
+}
+
+.pix-key {
+  margin: 15px 0;
+  font-size: 1.2em;
+}
+
+.pix-key button {
+  margin-left: 10px;
+  background: #800000;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.pix-key button:hover {
+  background: #b22222; /* tom mais claro de marsala */
+}
+
+.pix-qr img {
+  margin-top: 10px;
+  max-width: 100%;
+  border: 3px solid #800000;
+  border-radius: 10px;
+}
+
+/* Lista de Presentes */
+.gift-list {
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 500px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #800000; /* marsala */
+}
+
+.gift-list h2 {
+  margin-bottom: 10px;
+  color: #800000;
+}
+
+.gift-list p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.gift-list ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.gift-list ul li {
+  background: #add8e6; /* azul claro */
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: transform 0.2s;
+}
+
+.gift-list ul li:hover {
+  transform: scale(1.05);
+  background: #800000;
+  color: white;
 }
 
 /* Formulário */
@@ -103,7 +190,7 @@ form {
 
 form h2 {
   margin-bottom: 15px;
-  color: #d63384;
+  color: #800000; /* marsala */
 }
 
 input, select, textarea {
@@ -116,7 +203,7 @@ input, select, textarea {
 }
 
 button {
-  background: #ff69b4;
+  background: #800000; /* marsala */
   color: white;
   padding: 12px;
   border: none;
@@ -127,7 +214,7 @@ button {
 }
 
 button:hover {
-  background: #d63384;
+  background: #add8e6; /* azul claro */
 }
 
 footer {
@@ -140,13 +227,13 @@ footer {
 
 footer a {
   margin: 0 10px;
-  color: #d63384;
+  color: #800000; /* marsala */
   font-size: 1.5em;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #ff69b4;
+  color: #add8e6; /* azul claro */
 }
 
 @keyframes fadeIn {
@@ -161,14 +248,14 @@ footer a:hover {
 
 /* Responsividade */
 @media (max-width: 768px) {
-  header h1 { font-size: 2.2em; }
+  header h1 { font-size: 3em; }
   .info { font-size: 1em; }
   .btn { flex: 1 1 100%; padding: 12px 20px; font-size: 1em; }
 }
 
 @media (max-width: 480px) {
   header { height: 40vh; }
-  header h1 { font-size: 1.8em; }
+  header h1 { font-size: 2.2em; }
   .info { font-size: 0.9em; }
   .btn { font-size: 0.9em; padding: 10px 15px; }
 }

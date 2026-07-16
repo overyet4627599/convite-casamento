@@ -1,5 +1,5 @@
 // Contador regressivo
-const weddingDate = new Date("Nov 18, 2026 16:00:00").getTime();
+const weddingDate = new Date("Sep 11, 2026 18:00:00").getTime();
 const countdownElement = document.getElementById("countdown");
 
 const timer = setInterval(() => {
