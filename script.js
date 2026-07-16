@@ -1,4 +1,6 @@
+// =======================
 // Contador regressivo
+// =======================
 const weddingDate = new Date("Sep 11, 2026 18:00:00").getTime();
 const countdownElement = document.getElementById("countdown");
 
@@ -24,7 +26,9 @@ const timer = setInterval(() => {
     <span>${seconds}</span>s`;
 }, 1000);
 
+// =======================
 // Controle da música
+// =======================
 const music = document.getElementById("bg-music");
 function toggleMusic() {
   if (music.paused) {
@@ -33,3 +37,34 @@ function toggleMusic() {
     music.pause();
   }
 }
+
+// =======================
+// Carrossel de fotos
+// =======================
+let currentSlide = 0;
+const slides = document.querySelectorAll(".carousel-container img");
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove("active");
+    if (i === index) {
+      slide.classList.add("active");
+    }
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % slides.length;
+  showSlide(currentSlide);
+}
+
+function prevSlide() {
+  currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+  showSlide(currentSlide);
+}
+
+// Troca automática a cada 5 segundos
+setInterval(nextSlide, 5000);
+
+// Inicializa carrossel
+showSlide(currentSlide);

@@ -177,6 +177,57 @@ section {
   color: white;
 }
 
+/* Carrossel de Fotos */
+.carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-container img {
+  min-width: 100%;
+  display: none;
+  border-radius: 15px;
+}
+
+.carousel-container img.active {
+  display: block;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #800000; /* marsala */
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5em;
+  transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+  background: #add8e6; /* azul claro */
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
 /* Formulário */
 form {
   max-width: 400px;
@@ -258,4 +309,16 @@ footer a:hover {
   header h1 { font-size: 2.2em; }
   .info { font-size: 0.9em; }
   .btn { font-size: 0.9em; padding: 10px 15px; }
+  .gift-list, .pix-block, .carousel {
+    max-width: 95%;
+    padding: 15px;
+  }
+  .carousel-btn {
+    font-size: 1.2em;
+    padding: 8px;
+  }
+  .gift-list ul li {
+    font-size: 0.9em;
+    padding: 8px;
+  }
 }
