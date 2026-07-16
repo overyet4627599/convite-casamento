@@ -10,7 +10,7 @@ body {
 /* Cabeçalho com foto dos noivos e overlay marsala */
 header {
   position: relative;
-  background: url('fotos/fundo.jpg') no-repeat center/cover;
+  background: url('fotos/fundo.jpeg') no-repeat center/cover;
   height: 100vh; /* ocupa toda a tela */
   display: flex;
   align-items: center;
