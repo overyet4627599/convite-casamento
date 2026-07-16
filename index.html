@@ -5,13 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Convite de Casamento - Tiago & Kaiane</title>
 
-  <!-- Fonte personalizada -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <!-- Ícones Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- CSS externo -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,7 +23,6 @@
       <p><strong>Sexta-feira, 11 de Setembro às 18:00</strong></p>
     </div>
 
-    <!-- Contador regressivo -->
     <div class="countdown" id="countdown"></div>
 
     <div class="buttons">
@@ -37,12 +33,10 @@
       <a href="https://maps.app.goo.gl/UQxGFGQzmohDNSAo7?g_st=aw" class="btn"><i class="fas fa-home"></i> Residência do Paulo Marinheiro</a>
     </div>
 
-    <!-- Bloco de presente via Pix -->
     <div id="pix" class="pix-block">
       <h2>🎁 Presente via Pix</h2>
       <p>Sua contribuição é muito especial para nós!</p>
 
-      <!-- Chave Pix -->
       <div class="pix-key">
         <strong>Chave Pix:</strong> 88988785341
         <button onclick="navigator.clipboard.writeText('88988785341'); alert('Chave Pix copiada!');">
@@ -50,7 +44,6 @@
         </button>
       </div>
 
-      <!-- QR Code Pix -->
       <div class="pix-qr">
         <p>Ou escaneie o QR Code abaixo:</p>
         <a href="https://nubank.com.br/cobrar/1ckb0x/6a582329-a5ba-406e-8a54-6b8d6a036bc4" target="_blank">
@@ -59,7 +52,6 @@
       </div>
     </div>
 
-    <!-- Lista de Presentes -->
     <div id="presentes" class="gift-list">
       <h2>🎁 Lista de Presentes</h2>
       <p>Se preferir, escolha um dos itens abaixo ou algo da sua preferência:</p>
@@ -93,7 +85,6 @@
       </ul>
     </div>
 
-    <!-- Formulário de confirmação -->
     <form action="https://formsubmit.co/overyet4627599@gmail.com" method="POST">
       <h2>Confirme sua presença</h2>
       <input type="text" name="nome" placeholder="Seu nome" required>
@@ -107,18 +98,15 @@
       <textarea name="mensagem" placeholder="Mensagem para os noivos (opcional)"></textarea>
       <button type="submit">Enviar Confirmação</button>
 
-      <!-- Configurações extras -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://site-dos-noivos.com/obrigado.html">
       <input type="text" name="_honey" style="display:none">
     </form>
 
-    <!-- Controle da música -->
     <div style="margin-top:20px;">
       <button onclick="toggleMusic()">🎵 Play/Pause Música</button>
     </div>
 
-    <!-- Música de fundo -->
     <audio id="bg-music" loop>
       <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
       Seu navegador não suporta áudio.
@@ -134,7 +122,6 @@
     </div>
   </footer>
 
-  <!-- JS externo -->
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Great Vibes', cursive;
-  background: linear-gradient(to bottom, #add8e6, #ffe4e1); /* azul claro + tom suave */
-  color: #800000; /* marsala */
+  background: linear-gradient(to bottom, #add8e6, #ffe4e1); 
+  color: #800000; 
   text-align: center;
   overflow-x: hidden;
 }
@@ -19,7 +19,7 @@ header {
 }
 
 header h1 {
-  font-size: 4em; /* nome dos noivos maior */
+  font-size: 4em; 
 }
 
 section {
@@ -37,13 +37,13 @@ section {
   font-size: 1.5em;
   font-weight: bold;
   margin: 20px 0;
-  color: #800000; /* marsala */
+  color: #800000; 
   font-family: 'Segoe UI', sans-serif;
   animation: pulse 2s infinite;
 }
 
 .countdown span {
-  background: #add8e6; /* azul claro */
+  background: #add8e6; 
   padding: 5px 10px;
   border-radius: 8px;
   margin: 0 5px;
@@ -65,7 +65,7 @@ section {
 }
 
 .btn {
-  background: #800000; /* marsala */
+  background: #800000; 
   color: white;
   padding: 15px 25px;
   border-radius: 30px;
@@ -87,19 +87,18 @@ section {
 
 .btn:hover {
   transform: scale(1.05);
-  background: #add8e6; /* azul claro */
+  background: #add8e6; 
 }
 
-/* Bloco Pix */
 .pix-block {
   margin: 30px auto;
   padding: 20px;
   max-width: 400px;
-  background: #add8e6; /* azul claro */
+  background: #add8e6; 
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   font-family: 'Segoe UI', sans-serif;
-  color: #800000; /* marsala */
+  color: #800000; 
 }
 
 .pix-block h2 {
@@ -124,7 +123,7 @@ section {
 }
 
 .pix-key button:hover {
-  background: #b22222; /* tom mais claro de marsala */
+  background: #b22222; 
 }
 
 .pix-qr img {
@@ -134,7 +133,6 @@ section {
   border-radius: 10px;
 }
 
-/* Lista de Presentes */
 .gift-list {
   margin: 30px auto;
   padding: 20px;
@@ -143,7 +141,7 @@ section {
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   font-family: 'Segoe UI', sans-serif;
-  color: #800000; /* marsala */
+  color: #800000;
 }
 
 .gift-list h2 {
@@ -163,7 +161,7 @@ section {
 }
 
 .gift-list ul li {
-  background: #add8e6; /* azul claro */
+  background: #add8e6; 
   margin: 6px 0;
   padding: 10px;
   border-radius: 8px;
@@ -177,7 +175,6 @@ section {
   color: white;
 }
 
-/* Carrossel de Fotos */
 .carousel {
   position: relative;
   max-width: 800px;
@@ -206,7 +203,7 @@ section {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: #800000; /* marsala */
+  background: #800000; 
   color: white;
   border: none;
   padding: 10px;
@@ -217,7 +214,7 @@ section {
 }
 
 .carousel-btn:hover {
-  background: #add8e6; /* azul claro */
+  background: #add8e6; 
 }
 
 .carousel-btn.prev {
@@ -228,7 +225,6 @@ section {
   right: 10px;
 }
 
-/* Formulário */
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -241,7 +237,7 @@ form {
 
 form h2 {
   margin-bottom: 15px;
-  color: #800000; /* marsala */
+  color: #800000; 
 }
 
 input, select, textarea {
@@ -254,7 +250,7 @@ input, select, textarea {
 }
 
 button {
-  background: #800000; /* marsala */
+  background: #800000; 
   color: white;
   padding: 12px;
   border: none;
@@ -265,7 +261,7 @@ button {
 }
 
 button:hover {
-  background: #add8e6; /* azul claro */
+  background: #add8e6; 
 }
 
 footer {
@@ -278,13 +274,13 @@ footer {
 
 footer a {
   margin: 0 10px;
-  color: #800000; /* marsala */
+  color: #800000; 
   font-size: 1.5em;
   text-decoration: none;
 }
 
 footer a:hover {
-  color: #add8e6; /* azul claro */
+  color: #add8e6; 
 }
 
 @keyframes fadeIn {
@@ -297,7 +293,6 @@ footer a:hover {
   to {transform: translateY(0); opacity: 1;}
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
   header h1 { font-size: 3em; }
   .info { font-size: 1em; }
