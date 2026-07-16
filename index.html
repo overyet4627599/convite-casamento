@@ -1,106 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaiane & Tiago</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convite de Casamento - Tiago & Kaiane</title>
 
-    <link rel="stylesheet" href="style.css">
+  <!-- Fonte personalizada -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Ícones Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<section class="hero">
+  <header>
+    <h1>Tiago & Kaiane</h1>
+  </header>
 
-    <h1>Kaiane & Tiago</h1>
+  <section>
+    <div class="info">
+      <p>💍 Com a bênção de Deus e de nossos pais</p>
+      <p><strong>Sábado, 18 de Novembro às 16:00</strong></p>
+      <p>📍 Salão de Festas - Mirante Eventos</p>
+    </div>
 
-    <p>11 de Setembro de 2026 • 18:00</p>
+    <!-- Contador regressivo -->
+    <div class="countdown" id="countdown"></div>
 
-    <button onclick="abrirConvite()">
-        Toque para abrir nosso convite
-    </button>
+    <div class="buttons">
+      <a href="https://site-dos-noivos.com" class="btn"><i class="fas fa-heart"></i> Site dos Noivos</a>
+      <a href="https://nubank.com.br/pix/exemplo" class="btn"><i class="fas fa-gift"></i> Presente via Pix</a>
+      <a href="https://lista-de-presentes.com" class="btn"><i class="fas fa-list"></i> Lista de Presentes</a>
+      <a href="https://maps.google.com?q=local+cerimonia" class="btn"><i class="fas fa-map-marker-alt"></i> Local da Cerimônia</a>
+      <a href="https://maps.google.com?q=local+recepcao" class="btn"><i class="fas fa-map-marker-alt"></i> Local da Recepção</a>
+    </div>
 
-    <h2 id="contador"></h2>
+    <!-- Formulário de confirmação -->
+    <form action="https://formsubmit.co/overyet4627599@gmail.com" method="POST">
+      <h2>Confirme sua presença</h2>
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <select name="presenca" required>
+        <option value="">Você irá?</option>
+        <option value="Sim">Sim, estarei presente</option>
+        <option value="Não">Infelizmente não poderei</option>
+      </select>
+      <input type="number" name="acompanhantes" placeholder="Número de acompanhantes" min="0">
+      <textarea name="mensagem" placeholder="Mensagem para os noivos (opcional)"></textarea>
+      <button type="submit">Enviar Confirmação</button>
 
-</section>
+      <!-- Configurações extras -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://site-dos-noivos.com/obrigado.html">
+      <input type="text" name="_honey" style="display:none">
+    </form>
 
-<section>
+    <!-- Controle da música -->
+    <div style="margin-top:20px;">
+      <button onclick="toggleMusic()">🎵 Play/Pause Música</button>
+    </div>
 
-    <h2>Mensagem</h2>
+    <!-- Música de fundo -->
+    <audio id="bg-music" loop>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Seu navegador não suporta áudio.
+    </audio>
+  </section>
 
-    <p>
-        Com o coração cheio de alegria, convidamos você para
-        celebrar conosco um dos momentos mais importantes
-        de nossas vidas.
-    </p>
+  <footer>
+    <p>Clique nos ícones para interagir ✨</p>
+    <p>Com carinho, Tiago & Kaiane 💕</p>
+    <div>
+      <a href="https://instagram.com/seuinsta" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/seunumerowhatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
 
-</section>
-
-<section>
-
-    <h2>Galeria</h2>
-
-    <img src="fotos/foto1.jpg">
-    <img src="fotos/foto2.jpg">
-    <img src="fotos/foto3.jpg">
-    <img src="fotos/foto4.jpg">
-
-</section>
-
-<section>
-
-    <h2>Cerimônia</h2>
-
-    <p>Capela Santa Luzia - Pau D'Arco</p>
-
-</section>
-
-<section>
-
-    <h2>Recepção</h2>
-
-    <p>Deck do Paulo Marinheiro</p>
-
-</section>
-
-<section>
-
-    <h2>Lista de Presentes</h2>
-
-    <ul>
-        <li>Colcha de cama</li>
-        <li>Toalha</li>
-        <li>Kit higiene</li>
-        <li>Talheres</li>
-        <li>Kit panelas</li>
-        <li>TV</li>
-        <li>Sofá</li>
-        <li>Liquidificador</li>
-        <li>Ou qualquer presente escolhido com carinho.</li>
-    </ul>
-
-</section>
-
-<section>
-
-    <h2>Pix</h2>
-
-    <p>88 98878-5341</p>
-
-</section>
-
-<section>
-
-    <h2>Confirmar Presença</h2>
-
-    <input id="nome" placeholder="Digite seu nome">
-
-    <button onclick="confirmar()">
-        Confirmar
-    </button>
-
-</section>
-
-<script src="script.js"></script>
-
+  <!-- JS externo -->
+  <script src="script.js"></script>
 </body>
 </html>

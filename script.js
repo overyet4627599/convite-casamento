@@ -1,48 +1,35 @@
-function abrirConvite(){
+// Contador regressivo
+const weddingDate = new Date("Nov 18, 2026 16:00:00").getTime();
+const countdownElement = document.getElementById("countdown");
 
-    alert(
-        "Seja bem-vindo ao nosso casamento!"
-    );
+const timer = setInterval(() => {
+  const now = new Date().getTime();
+  const distance = weddingDate - now;
 
-}
+  if (distance < 0) {
+    clearInterval(timer);
+    countdownElement.innerHTML = "🎉 O grande dia chegou!";
+    return;
+  }
 
-let data =
-new Date("2026-09-11 18:00:00");
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-setInterval(()=>{
+  countdownElement.innerHTML = `⏳ Faltam 
+    <span>${days}</span> dias, 
+    <span>${hours}</span>h 
+    <span>${minutes}</span>m 
+    <span>${seconds}</span>s`;
+}, 1000);
 
-    let hoje =
-    new Date();
-
-    let diferenca =
-    data-hoje;
-
-    let dias =
-    Math.floor(
-    diferenca/
-    (1000*60*60*24)
-    );
-
-    document
-    .getElementById(
-    "contador"
-    ).innerHTML=
-    dias+" dias restantes";
-
-},1000);
-
-
-function confirmar(){
-
-    let nome =
-    document
-    .getElementById(
-    "nome"
-    ).value;
-
-    alert(
-      nome+
-      ", sua presença foi registrada!"
-    );
-
+// Controle da música
+const music = document.getElementById("bg-music");
+function toggleMusic() {
+  if (music.paused) {
+    music.play();
+  } else {
+    music.pause();
+  }
 }
