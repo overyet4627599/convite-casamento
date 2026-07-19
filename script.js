@@ -65,7 +65,7 @@ if (slides.length > 0) {
 }
 
 // Redirecionamento automático na página de obrigado
-if (window.location.pathname.includes("obrigado.html")) {
+if (window.location.pathname.includes("https://convite-casamento-sandy.vercel.app/")) {
   let counter = 5; // segundos
   const counterElement = document.getElementById("redirect-counter");
 
