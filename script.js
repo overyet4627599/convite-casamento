@@ -63,20 +63,3 @@ if (slides.length > 0) {
   setInterval(nextSlide, 5000);
   showSlide(currentSlide);
 }
-
-// Redirecionamento automático na página de obrigado
-if (window.location.pathname.includes("https://convite-casamento-sandy.vercel.app/")) {
-  let counter = 5; // segundos
-  const counterElement = document.getElementById("redirect-counter");
-
-  const interval = setInterval(() => {
-    counter--;
-    if (counterElement) {
-      counterElement.textContent = counter;
-    }
-    if (counter <= 0) {
-      clearInterval(interval);
-      window.location.href = "index.html"; // volta para o convite
-    }
-  }, 1000);
-}
