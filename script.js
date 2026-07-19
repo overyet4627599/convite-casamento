@@ -1,37 +1,42 @@
+// Contador regressivo para o casamento
 const weddingDate = new Date("Sep 11, 2026 18:00:00").getTime();
 const countdownElement = document.getElementById("countdown");
 
-const timer = setInterval(() => {
-  const now = new Date().getTime();
-  const distance = weddingDate - now;
+if (countdownElement) {
+  const timer = setInterval(() => {
+    const now = new Date().getTime();
+    const distance = weddingDate - now;
 
-  if (distance < 0) {
-    clearInterval(timer);
-    countdownElement.innerHTML = "🎉 O grande dia chegou!";
-    return;
-  }
+    if (distance < 0) {
+      clearInterval(timer);
+      countdownElement.innerHTML = "🎉 O grande dia chegou!";
+      return;
+    }
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  countdownElement.innerHTML = `⏳ Faltam 
-    <span>${days}</span> dias, 
-    <span>${hours}</span>h 
-    <span>${minutes}</span>m 
-    <span>${seconds}</span>s`;
-}, 1000);
+    countdownElement.innerHTML = `⏳ Faltam 
+      <span>${days}</span> dias, 
+      <span>${hours}</span>h 
+      <span>${minutes}</span>m 
+      <span>${seconds}</span>s`;
+  }, 1000);
+}
 
+// Controle da música
 const music = document.getElementById("bg-music");
 function toggleMusic() {
-  if (music.paused) {
+  if (music && music.paused) {
     music.play();
-  } else {
+  } else if (music) {
     music.pause();
   }
 }
 
+// Carrossel de imagens
 let currentSlide = 0;
 const slides = document.querySelectorAll(".carousel-container img");
 
@@ -54,6 +59,24 @@ function prevSlide() {
   showSlide(currentSlide);
 }
 
-setInterval(nextSlide, 5000);
+if (slides.length > 0) {
+  setInterval(nextSlide, 5000);
+  showSlide(currentSlide);
+}
 
-showSlide(currentSlide);
+// Redirecionamento automático na página de obrigado
+if (window.location.pathname.includes("obrigado.html")) {
+  let counter = 5; // segundos
+  const counterElement = document.getElementById("redirect-counter");
+
+  const interval = setInterval(() => {
+    counter--;
+    if (counterElement) {
+      counterElement.textContent = counter;
+    }
+    if (counter <= 0) {
+      clearInterval(interval);
+      window.location.href = "index.html"; // volta para o convite
+    }
+  }, 1000);
+}
